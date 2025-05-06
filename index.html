@@ -1,0 +1,89 @@
+<!--
+Copyright (c) 2024 LG Electronics Inc.
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Motion_Mouse_Control</title>
+	<style type="text/css">
+		body {
+			width: 100%;
+			height: 100%;
+			background-color: #202020;
+		}
+
+		div {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			display: table;
+		}
+
+		h1 {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			color: #FFFFFF;
+		}
+
+	</style>
+</head>
+
+<script src="webOSTVjs-1.2.10/webOSTV.js" charset="utf-8"></script>
+<script src="webOSTVjs-1.2.10/webOSTV-dev.js" charset="utf-8"></script>
+<script src="webOSTVjs-1.2.10/webOSTV-motion-control-output.js" charset="utf-8"></script>
+
+<body>
+<h1>
+<div id="log">
+<script type="text/javascript">
+	(function () {
+    var old = console.log;
+    var logger = document.getElementById('log');
+    console.log = function (message) {
+        if (typeof message == 'object') {
+            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+        } else {
+            logger.innerHTML += message + '<br />';
+        }
+    }
+	})();
+	window.addEventListener("keydown", function(inEvent) {
+	if (inEvent.keyCode == 37) {
+    	console.log("Left button was pressed")
+    }
+    if (inEvent.keyCode == 38) {
+    	console.log("Up button was pressed")
+    }
+	if (inEvent.keyCode == 39) {
+    	console.log("Right button was pressed")
+    }
+    if (inEvent.keyCode == 40) {
+    	console.log("Down button was pressed")
+    }
+    if (inEvent.keyCode == 13) {
+    	console.log("OK button was pressed")
+    }
+    if (inEvent.keyCode == 403) {
+    	console.log("Red button was pressed")
+    }
+    if (inEvent.keyCode == 404) {
+    	console.log("Green button was pressed")
+    }
+    if (inEvent.keyCode == 405) {
+    	console.log("Yellow button was pressed")
+    }
+    if (inEvent.keyCode == 406) {
+    	console.log("Blue button was pressed")
+    }
+});
+</script>
+    	</h1>
+	</div>
+</body>
+
+</html>
