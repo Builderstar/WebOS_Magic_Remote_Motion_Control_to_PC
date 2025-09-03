@@ -5,7 +5,7 @@ I. The web app:
 Install the web application using developer mode, detailed information about the process can be accessed on LG's official website: https://webostv.developer.lge.com/develop/getting-started/developer-mode-app
 
 II. The python server:
-In order to recieve the input data from the LG tv app a python server has to be run on the machine. Make sure to install the required packages (http.server, pymouse, etc.:)
+In order to recieve the input data from the LG tv app a python server has to run on the machine. Make sure to install the required packages (http.server, pymouse, etc.:)
 
 You can change and tweak the code to suit your needs, but if someone is intrested in using this as a complete app just open an issue here on github and I do my best to add more features.
 
